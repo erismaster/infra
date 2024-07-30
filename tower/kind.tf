@@ -3,11 +3,11 @@ provider "kind" {}
 resource "kind_cluster" "default" {
     name           = "test-cluster"
     wait_for_ready = true
+    node_image = "kindest/node:v1.30.0"
 
   kind_config {
       kind        = "Cluster"
       api_version = "kind.x-k8s.io/v1alpha4"
-      node_image = "kindest/node:v1.30.0"
 
       node {
           role = "control-plane"
