@@ -19,13 +19,13 @@ terraform {
 }
 
 provider "kubernetes" {
-  #config_path    = "~/.kube/config"
+  config_path = "/tmp/.kube/config"
   config_context = "microk8s"
 }
 
 provider "helm" {
   kubernetes {
-    config_path = "/root/.kube/config"
+    config_path = "/tmp/.kube/config"
     config_context = "microk8s"
   }
 }
