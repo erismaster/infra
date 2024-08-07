@@ -1,0 +1,14 @@
+apiVersion: ollama.ayaka.io/v1
+kind: Model
+metadata:
+  name: llama3-1
+spec:
+  replicas: 1
+  image: llama3.1
+  imagePullPolicy: IfNotPresent
+  resources:
+    requests:
+      nvidia.com/gpu: 1
+    limits:
+      nvidia.com/gpu: 1
+      #  storageClassName: local-path
