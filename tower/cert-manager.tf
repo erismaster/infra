@@ -1,5 +1,5 @@
 resource "helm_release" "cert-manager" {
-  chart = "jetstack/cert-manager"
+  chart = "cert-manager"
   repository = "https://charts.jetstack.io"
   name  = "cert-manager"
   
